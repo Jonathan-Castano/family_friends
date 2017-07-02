@@ -1,7 +1,8 @@
-<% @posts.each do |x| %>
+<% @posts.each do |post| %>
   <div class="white">
-      <%= image_tag x.image.url(:medium) %>
+      <%= image_tag post.image.url(:medium) %>
       <br>
-      <%= x.description %>
+      <%= post.description %>
     </div>
+   <%= link_to "Delete", post, :method => :delete, :confirm => "Are you sure?" %>
   <% end %>

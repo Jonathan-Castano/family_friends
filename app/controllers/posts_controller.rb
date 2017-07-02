@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def new
-     @post = Post.new
+    @post = Post.new
   end
 
   def index
@@ -20,6 +20,13 @@ class PostsController < ApplicationController
       flash[:error] = @post.errors.full_messages
       redirect_to new_post_path
     end
+
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy!
+    redirect_to '/posts', :notice => "Your post has been deleted"
   end
 
   private
