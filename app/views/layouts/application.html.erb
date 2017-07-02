@@ -35,14 +35,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
-                <%= link_to "PRJT", root_url, class: "navbar-brand" %>
+                <a href="http://localhost:3000/posts/"><img src="https://thumb.ibb.co/cjzdea/logo_no_font.png" alt="Grafer" xwidth="200" height="40" border="0"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
+          <li>
+            <%= link_to "Grafer", root_url, class: "navbar-brand" %>
+
+          </li>
           <li>
             <%= link_to "New post", new_post_path %>
           </li>
@@ -85,7 +88,8 @@
         <!-- /.row -->
 
     </div>
-    <style>body{padding-top:70px;}</style>
+    <style>
+    body{padding-top:70px;}</style>
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.1 -->
