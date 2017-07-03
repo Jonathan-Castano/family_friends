@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def index
@@ -12,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(permit_post)
+    @post = current_user.posts.build(permit_post)
     if @post.save
       flash[:success] = "Success!"
       redirect_to post_path(@post)
