@@ -8,13 +8,15 @@
                 <h3>  <%= post.description %></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <p>
-                    <a href="#" class="btn btn-primary">Buy Now!</a>
+                    <div class="btn btn-primary">
                     <%= link_to "Delete", post, :method => :delete, :confirm => "Are you sure?" %>
+                  </div>
                 </p>
             </div>
         </div>
     </div>
     <% end %>
+
 
   <!-- <div class="white"> -->
 
