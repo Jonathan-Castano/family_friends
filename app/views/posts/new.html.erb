@@ -1,12 +1,16 @@
+<div class="newpost">
 <h2>New Post</h2>
-<hr>
+</div>
+
 
 <%= form_for @post, html: {multipart: true } do |f| %>
+<div class="postbox">
     <%= f.label :image %>
     <%= f.file_field :image %>
   <br>
   <%= f.label :description %>
   <%= f.text_area :description %>
+  </div> 
   <br>
   <%= f.submit %>
 

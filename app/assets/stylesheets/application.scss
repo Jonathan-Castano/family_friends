@@ -21,11 +21,45 @@
 @import "bootstrap";
 
 body{
-  font-family: "Open Sans";
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
-  background-image: url("pexels-photo-26750.jpg");
+  background-image: url("https://image.ibb.co/faoacv/gaferbg.png");
 }
 
+.newpost{
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 4px;
+  margin-bottom: 80px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 150px;
+  height: 80px;
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+
+}
+
+.postbox {
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 400px;
+    height: 200px;
+    border-radius: 4px;
+    -webkit-transition: border 0.2s ease-in-out;
+    -o-transition: border 0.2s ease-in-out;
+    transition: border 0.2s ease-in-out;
+   }
 
 .btn {
   text-decoration: none;
