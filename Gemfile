@@ -4,7 +4,8 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
+gem 'haml', '~> 5.0', '>= 5.0.1'
+gem 'acts_as_votable', '~> 0.10.0'
 gem 'paperclip'
 gem 'bootstrap-sass'
 gem 'devise'
