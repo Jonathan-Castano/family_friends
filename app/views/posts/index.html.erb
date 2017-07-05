@@ -4,44 +4,44 @@
   <div class="col-md-3 col-sm-6 hero-feature">
     <div class="thumbnail">
       <span class="images">
-      <%= link_to image_tag(post.image.url(:medium), class: 'media-object'), post.image.url, target: '_blank' %>
-</span>
+        <%= link_to image_tag(post.image.url(:medium), class: 'media-object'), post.image.url, target: '_blank' %>
+      </span>
       <div class="caption">
         <h3><%= post.description %></h3>
         <p> created by <%= post.user.email %></p>
         <p>
 
-<div>
+          <div>
             <%= link_to like_post_path(post), class: "like", method: :put do %>
             <button type"button" class"btn btn-info" aria-label="Left Align">
               <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
               <span class="badge"><%= post.get_upvotes.size %></span>
             </button>
-              <% end %>
+            <% end %>
 
-              <%= link_to unlike_post_path(post), class: "like", method: :put do %>
-              <button type"button" class"btn btn-info" aria-label="Left Align">
-                <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
-                <span class="badge"><%= post.get_downvotes.size %></span>
-              </button>
-                <% end %>
+            <%= link_to unlike_post_path(post), class: "like", method: :put do %>
+            <button type"button" class"btn btn-info" aria-label="Left Align">
+              <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
+              <span class="badge"><%= post.get_downvotes.size %></span>
+            </button>
+            <% end %>
 
-              </div>
-              <br>
-              <div class="btn btn-primary">
-
-                <%= link_to "Delete", post, :method => :delete, :confirm => "Are you sure?" %>
-    </div
-
-              </p>
+          </div>
+          <br>
+          <%- if current_user %>
+          <div class="btn btn-primary">
+            <%= link_to "Delete", post, :method => :delete, :confirm => "Are you sure?" %>
+          </div>
+          <% end %>
+        </p>
       </div>
     </div>
   </div>
   <% end %>
 </div>
 <style>
- .btn {
-   background-color: lightblue;
- }
+.btn {
+  background-color: lightblue;
+}
 
 </style>
