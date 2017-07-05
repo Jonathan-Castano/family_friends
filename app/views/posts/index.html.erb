@@ -10,10 +10,30 @@
         <h3><%= post.description %></h3>
         <p> created by <%= post.user.email %></p>
         <p>
-          <div class="btn btn-primary">
-            <%= link_to "Delete", post, :method => :delete, :confirm => "Are you sure?" %>
-          </div>
-        </p>
+
+<div>
+            <%= link_to like_post_path(post), class: "like", method: :put do %>
+            <button type"button" class"btn btn-info" aria-label="Left Align">
+              <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
+              <span class="badge"><%= post.get_upvotes.size %></span>
+            </button>
+              <% end %>
+
+              <%= link_to unlike_post_path(post), class: "like", method: :put do %>
+              <button type"button" class"btn btn-info" aria-label="Left Align">
+                <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
+                <span class="badge"><%= post.get_downvotes.size %></span>
+              </button>
+                <% end %>
+
+              </div>
+              <br>
+              <div class="btn btn-primary">
+
+                <%= link_to "Delete", post, :method => :delete, :confirm => "Are you sure?" %>
+    </div
+
+              </p>
       </div>
     </div>
   </div>
