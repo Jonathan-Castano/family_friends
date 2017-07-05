@@ -5,12 +5,16 @@
 
 <%= form_for @post, html: {multipart: true } do |f| %>
 <div class="postbox">
+  <br><center>
     <%= f.label :image %>
+    <br>
     <%= f.file_field :image %>
+  </center>
   <br>
   <%= f.label :description %>
+  <br>
   <%= f.text_area :description %>
-  </div> 
+  </div>
   <br>
   <%= f.submit %>
 
